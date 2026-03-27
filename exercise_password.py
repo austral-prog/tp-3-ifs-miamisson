@@ -23,4 +23,28 @@ def password():
         Contraseña muy corta
         Debe contener un numero
     """
-    pass
+    
+    contraseña = input()
+    if len(contraseña) >= 8:
+        cantidad_caracteres = True
+    else:
+        cantidad_caracteres = False
+
+    
+    if "0" in contraseña or "1" in contraseña or "2" in contraseña or "3" in contraseña or "4" in contraseña or "5" in contraseña or "6" in contraseña or "7" in contraseña or "8" in contraseña or "9" in contraseña:
+        hay_numero = True
+    else:
+        hay_numero = False
+
+    if cantidad_caracteres == True and hay_numero == True:
+        print("Contraseña valida")
+    elif cantidad_caracteres == False and hay_numero == True:
+        print("Contraseña muy corta")
+    elif cantidad_caracteres == True and hay_numero == False:
+        print("Debe contener un numero")
+    else: 
+        print("Contraseña muy corta")
+        print("Debe contener un numero")
+
+
+#password()
